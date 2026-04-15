@@ -20,7 +20,7 @@ export function SiteHeader() {
             </span>
           </a>
           <Button asChild size="sm" className="lg:hidden">
-            <a href="/resume/Deepak_Chauhan_Resume_Updated.docx" target="_blank" rel="noreferrer">
+            <a href="/resume/Deepak_Chauhan_Resume_Updated.pdf" target="_blank" rel="noreferrer">
               Resume
             </a>
           </Button>
@@ -40,7 +40,7 @@ export function SiteHeader() {
           </nav>
 
           <Button asChild size="sm" className="hidden lg:inline-flex">
-            <a href="/resume/Deepak_Chauhan_Resume_Updated.docx" target="_blank" rel="noreferrer">
+            <a href="/resume/Deepak_Chauhan_Resume_Updated.pdf" target="_blank" rel="noreferrer">
               Resume
               <ArrowUpRight className="h-4 w-4" />
             </a>
