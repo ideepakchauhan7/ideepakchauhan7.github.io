@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { navItems } from "@/lib/site-data";
+import { navItems, resumeUrl } from "@/lib/site-data";
 
 export function SiteHeader() {
   return (
@@ -20,7 +20,7 @@ export function SiteHeader() {
             </span>
           </a>
           <Button asChild size="sm" className="lg:hidden">
-            <a href="/resume/Deepak_Chauhan_Resume_Updated.pdf" target="_blank" rel="noreferrer">
+            <a href={resumeUrl} target="_blank" rel="noreferrer">
               Resume
             </a>
           </Button>
@@ -40,7 +40,7 @@ export function SiteHeader() {
           </nav>
 
           <Button asChild size="sm" className="hidden lg:inline-flex">
-            <a href="/resume/Deepak_Chauhan_Resume_Updated.pdf" target="_blank" rel="noreferrer">
+            <a href={resumeUrl} target="_blank" rel="noreferrer">
               Resume
               <ArrowUpRight className="h-4 w-4" />
             </a>

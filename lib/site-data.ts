@@ -1,3 +1,6 @@
+export const resumeUrl =
+  "https://drive.google.com/file/d/1h-N3VHmuH5Qk4YE7M1C8eBi11ANtZOA6/view?usp=drive_link";
+
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Open Source", href: "#open-source" },

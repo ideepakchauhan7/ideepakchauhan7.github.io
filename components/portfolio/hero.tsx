@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
-import { heroLabels, heroStats } from "@/lib/site-data";
+import { heroLabels, heroStats, resumeUrl } from "@/lib/site-data";
 
 export function Hero() {
   return (
@@ -60,7 +60,7 @@ export function Hero() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="/resume/Deepak_Chauhan_Resume_Updated.pdf" target="_blank" rel="noreferrer">
+                <a href={resumeUrl} target="_blank" rel="noreferrer">
                   Download Resume
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
