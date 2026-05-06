@@ -59,6 +59,17 @@ export const contributions = [
 
 export const projects = [
   {
+    name: "Xerolas",
+    strapline: "Open-source AI lens for the desktop.",
+    description:
+      "Built a cross-platform Electron app that lets users capture any screen region and get streamed AI answers beside the selection, with BYOK provider setup, optional web-aware answers, follow-up questions, translation, summarization, and text extraction.",
+    impact: ["Windows, macOS, Linux releases", "BYOK-first open-source architecture", "Capture + streaming answer UX"],
+    stack: ["Electron", "TypeScript", "React", "Cloudflare Workers", "AI Providers"],
+    codeUrl: "https://github.com/ideepakchauhan7/Xerolas",
+    liveUrl: "https://xerolas.vercel.app",
+    className: "md:col-span-2",
+  },
+  {
     name: "High Frequency Trading System",
     strapline: "Low-latency systems engineering with C++.",
     description:

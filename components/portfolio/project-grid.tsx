@@ -1,4 +1,4 @@
-import { ArrowUpRight, BarChart3, Boxes, BrainCircuit, Cpu } from "lucide-react";
+import { ArrowUpRight, BarChart3, Boxes, BrainCircuit, Cpu, Sparkles } from "lucide-react";
 
 import { SectionHeading } from "@/components/portfolio/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -8,12 +8,15 @@ import { projects } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
 const iconMap = {
+  Xerolas: Sparkles,
   "High Frequency Trading System": Cpu,
   "Skin Disease Classification": BrainCircuit,
   "Black-Scholes Option Pricing": BarChart3,
 };
 
 const backgroundMap = {
+  Xerolas:
+    "bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_30%),linear-gradient(135deg,rgba(2,6,23,0.98),rgba(15,23,42,0.94))] text-white border-slate-700/70",
   "High Frequency Trading System":
     "bg-[radial-gradient(circle_at_top_left,rgba(217,119,6,0.28),transparent_32%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(30,41,59,0.92))] text-white border-slate-700/70",
   "Skin Disease Classification":
@@ -35,7 +38,7 @@ export function ProjectGrid() {
         <BentoGrid>
           {projects.map((project) => {
             const Icon = iconMap[project.name as keyof typeof iconMap] ?? Boxes;
-            const isDarkCard = project.name === "High Frequency Trading System";
+            const isDarkCard = project.name === "Xerolas" || project.name === "High Frequency Trading System";
 
             return (
               <article
