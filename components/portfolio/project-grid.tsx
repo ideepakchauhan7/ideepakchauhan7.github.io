@@ -1,4 +1,4 @@
-import { ArrowUpRight, BarChart3, Boxes, BrainCircuit, Cpu, Sparkles } from "lucide-react";
+import { ArrowUpRight, BarChart3, Boxes, Cpu, Sparkles } from "lucide-react";
 
 import { SectionHeading } from "@/components/portfolio/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -9,20 +9,17 @@ import { cn } from "@/lib/utils";
 
 const iconMap = {
   Xerolas: Sparkles,
-  "High Frequency Trading System": Cpu,
-  "Skin Disease Classification": BrainCircuit,
-  "Black-Scholes Option Pricing": BarChart3,
+  "Distributed Vector Database": BarChart3,
+  "C++20 Paper-Trading Platform": Cpu,
 };
 
 const backgroundMap = {
   Xerolas:
     "bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_30%),linear-gradient(135deg,rgba(2,6,23,0.98),rgba(15,23,42,0.94))] text-white border-slate-700/70",
-  "High Frequency Trading System":
+  "Distributed Vector Database":
     "bg-[radial-gradient(circle_at_top_left,rgba(217,119,6,0.28),transparent_32%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(30,41,59,0.92))] text-white border-slate-700/70",
-  "Skin Disease Classification":
-    "bg-[radial-gradient(circle_at_top_left,rgba(13,148,136,0.18),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(241,245,249,0.94))]",
-  "Black-Scholes Option Pricing":
-    "bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.24),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,247,237,0.94))]",
+  "C++20 Paper-Trading Platform":
+    "bg-[radial-gradient(circle_at_top_left,rgba(13,148,136,0.18),transparent_30%),linear-gradient(135deg,rgba(2,6,23,0.98),rgba(15,23,42,0.94))] text-white border-slate-700/70",
 };
 
 export function ProjectGrid() {
@@ -35,10 +32,13 @@ export function ProjectGrid() {
           description="The portfolio centers on three themes from the resume: low-latency systems, machine learning applications, and finance-oriented tooling with practical interfaces."
         />
 
-        <BentoGrid>
+        <BentoGrid className="md:grid-cols-6">
           {projects.map((project) => {
             const Icon = iconMap[project.name as keyof typeof iconMap] ?? Boxes;
-            const isDarkCard = project.name === "Xerolas" || project.name === "High Frequency Trading System";
+            const isDarkCard =
+              project.name === "Xerolas" ||
+              project.name === "Distributed Vector Database" ||
+              project.name === "C++20 Paper-Trading Platform";
 
             return (
               <article
@@ -50,8 +50,8 @@ export function ProjectGrid() {
                 )}
               >
                 <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
-                <div className="relative flex h-full flex-col justify-between gap-8">
-                  <div className="space-y-5">
+                <div className="relative flex h-full flex-col justify-between gap-10">
+                  <div className="space-y-6">
                     <div className="flex items-start justify-between gap-4">
                       <div className="space-y-2">
                         <p
@@ -80,11 +80,11 @@ export function ProjectGrid() {
                       {project.description}
                     </p>
 
-                    <div className="grid gap-3 sm:grid-cols-3">
+                    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                       {project.impact.map((item) => (
                         <div
                           key={item}
-                          className={cn("rounded-2xl border px-4 py-3 text-sm", {
+                          className={cn("rounded-2xl border px-4 py-4 text-sm leading-6", {
                             "border-white/10 bg-white/5 text-white/85": isDarkCard,
                             "border-border/70 bg-background/75 text-foreground": !isDarkCard,
                           })}
@@ -95,7 +95,7 @@ export function ProjectGrid() {
                     </div>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-5 pt-1">
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((item) => (
                         <Badge
@@ -121,7 +121,7 @@ export function ProjectGrid() {
                       {project.liveUrl ? (
                         <Button asChild variant={isDarkCard ? "outline" : "secondary"}>
                           <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                            Live Demo
+                            {project.liveLabel ?? "Live Demo"}
                             <ArrowUpRight className="h-4 w-4" />
                           </a>
                         </Button>

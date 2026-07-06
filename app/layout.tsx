@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Deepak Chauhan | Systems, ML, Open Source",
+  title: "Deepak Chauhan | AI, Systems, Open Source",
   description:
-    "Portfolio of Deepak Chauhan, featuring low-latency C++ systems, machine learning projects, and open source contributions.",
+    "Portfolio of Deepak Chauhan, featuring agentic AI work, low-latency C++ systems, and open source contributions.",
   metadataBase: new URL("https://ideepakchauhan7.github.io"),
 };
 

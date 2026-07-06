@@ -22,7 +22,7 @@ import {
   certifications,
   contactLinks,
   education,
-  experience,
+  experiences,
   skills,
 } from "@/lib/site-data";
 
@@ -44,14 +44,14 @@ export default function Home() {
             <div className="space-y-6">
               <SectionHeading
                 eyebrow="About"
-                title="A portfolio shaped by systems thinking and iteration speed."
-                description="The resume points to a consistent pattern: building performance-sensitive software, translating machine learning work into usable interfaces, and contributing thoughtfully in real-world repositories."
+                title="A portfolio shaped by systems, AI, and open source work."
+                description="The resume points to a consistent pattern: building performance-sensitive software, shipping agentic AI workflows, and contributing thoughtfully in real-world repositories."
               />
               <div className="rounded-[2rem] border border-border/70 bg-card/80 p-6 shadow-soft">
                 <p className="text-lg leading-8 text-muted-foreground">
-                  I enjoy problems that require both technical depth and practical delivery. That includes
-                  performance tuning in C++, experiment-driven model work in Python, and reading through large
-                  codebases carefully enough to make small but meaningful improvements.
+                    I enjoy problems that require both technical depth and practical delivery. That includes
+                    low-latency C++ systems, LLM and RAG workflows, and reading through large codebases carefully
+                    enough to make small but meaningful improvements.
                 </p>
               </div>
             </div>
@@ -61,8 +61,8 @@ export default function Home() {
                 <BriefcaseBusiness className="h-6 w-6 text-primary" />
                 <h3 className="mt-4 text-xl font-semibold">Internship Impact</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  Built predictive ML workflows at Atharvo and shipped a Flask-backed depression prediction app
-                  grounded in real data preparation and feature engineering.
+                  Built agentic AI and retrieval workflows at Codtech IT Solutions and shipped a Flask-backed
+                  depression prediction app at Atharvo.
                 </p>
               </article>
               <article className="rounded-[2rem] border border-border/70 bg-card/80 p-6 shadow-soft">
@@ -92,33 +92,35 @@ export default function Home() {
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Experience"
-              title="Hands-on ML work backed by a strong CS foundation."
-              description="The internship and degree work reinforce each other: applied experimentation on one side, and core systems and theory on the other."
+              title="Hands-on AI and ML work backed by a strong CS foundation."
+              description="The internships and degree work reinforce each other: applied experimentation on one side, and core systems and theory on the other."
             />
 
             <div className="grid gap-6 lg:grid-cols-2">
-              <article className="rounded-[2rem] border border-border/70 bg-card/85 p-6 shadow-soft">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                    <BriefcaseBusiness className="h-5 w-5" />
-                  </div>
-                  <div className="space-y-4">
-                    <div>
-                      <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">{experience.period}</p>
-                      <h3 className="mt-2 text-2xl font-semibold">
-                        {experience.role} <span className="text-muted-foreground">@ {experience.company}</span>
-                      </h3>
+              {experiences.map((experience) => (
+                <article key={`${experience.company}-${experience.role}`} className="rounded-[2rem] border border-border/70 bg-card/85 p-6 shadow-soft">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                      <BriefcaseBusiness className="h-5 w-5" />
                     </div>
-                    <div className="space-y-3 text-sm leading-7 text-muted-foreground">
-                      {experience.bullets.map((bullet) => (
-                        <p key={bullet} className="rounded-2xl border border-border/70 bg-background/70 px-4 py-3">
-                          {bullet}
-                        </p>
-                      ))}
+                    <div className="space-y-4">
+                      <div>
+                        <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">{experience.period}</p>
+                        <h3 className="mt-2 text-2xl font-semibold">
+                          {experience.role} <span className="text-muted-foreground">@ {experience.company}</span>
+                        </h3>
+                      </div>
+                      <div className="space-y-3 text-sm leading-7 text-muted-foreground">
+                        {experience.bullets.map((bullet) => (
+                          <p key={bullet} className="rounded-2xl border border-border/70 bg-background/70 px-4 py-3">
+                            {bullet}
+                          </p>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              ))}
 
               <article className="rounded-[2rem] border border-border/70 bg-card/85 p-6 shadow-soft">
                 <div className="flex items-start gap-4">
@@ -152,7 +154,7 @@ export default function Home() {
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Skills"
-              title="A toolbox that spans systems, ML, and product delivery."
+              title="A toolbox that spans systems, AI, and product delivery."
               description="Instead of listing everything in one place, the site groups the resume skills into the categories that best reflect how the work gets done."
             />
 
@@ -179,7 +181,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Achievements"
                 title="Signals of consistency beyond coursework."
-                description="Competitive programming, hackathon results, and GitHub recognition all reinforce the same story: steady practice and a bias for improving performance."
+                description="Competitive programming and open source recognition reinforce the same story: steady practice and a bias for improving performance."
               />
               <div className="grid gap-4">
                 {achievements.map((achievement) => (
@@ -194,7 +196,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Certifications"
                 title="Additional programs and simulations."
-                description="These complement the portfolio with software engineering exposure across finance, networking, and employability-focused learning."
+                description="These complement the portfolio with software engineering exposure and current AI tooling awareness."
               />
               <div className="rounded-[2rem] border border-border/70 bg-card/85 p-6 shadow-soft">
                 <div className="flex flex-wrap gap-3">
@@ -259,7 +261,7 @@ export default function Home() {
 
       <footer className="border-t border-border/70 py-6">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 text-sm text-muted-foreground sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>Deepak Chauhan portfolio, rebuilt with Next.js, shadcn-style components, and Magic UI motion.</p>
+          <p>Deepak Chauhan portfolio, updated from the resume and built with Next.js, shadcn-style components, and motion.</p>
           <p className="font-mono text-xs uppercase tracking-[0.24em]">2026 edition</p>
         </div>
       </footer>

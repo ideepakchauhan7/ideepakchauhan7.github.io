@@ -30,13 +30,13 @@ export function Hero() {
             </BlurFade>
             <BlurFade delay={0.18}>
               <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-                Building low-latency systems, ML products, and meaningful open source improvements.
+                Building low-latency systems, agentic AI workflows, and meaningful open source improvements.
               </h1>
             </BlurFade>
             <BlurFade delay={0.24}>
               <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
                 I&apos;m Deepak Chauhan, a computer science graduate who enjoys shipping C++ infrastructure,
-                machine learning applications, and carefully scoped contributions inside large engineering codebases.
+                RAG and LangGraph workflows, and carefully scoped contributions inside large engineering codebases.
               </p>
             </BlurFade>
           </div>
@@ -109,7 +109,7 @@ export function Hero() {
                     <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">Profile</p>
                     <h2 className="mt-3 text-2xl font-semibold">Deepak Chauhan</h2>
                     <p className="mt-2 max-w-sm text-sm leading-7 text-muted-foreground">
-                      B.Tech. Computer Science graduate with a foundation in systems, machine learning,
+                      B.Tech. Computer Science graduate with a foundation in systems, AI engineering,
                       and production-minded open source collaboration.
                     </p>
                   </div>
