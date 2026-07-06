@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepak Chauhan Resume</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --text: #122033;
+        --muted: #4b5563;
+        --accent: #b45309;
+        --line: #d9dee7;
+        --chip: #eef4f7;
+      }
+
+      @page {
+        margin: 0.4in;
+        size: A4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        color: var(--text);
+        background: #fff;
+        line-height: 1.3;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .header {
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 28px;
+        letter-spacing: 0.02em;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .contact a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: 18px;
+      }
+
+      section {
+        margin-bottom: 14px;
+        break-inside: avoid;
+      }
+
+      h2 {
+        margin: 0 0 8px;
+        font-size: 13px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .summary {
+        font-size: 12.5px;
+        color: var(--muted);
+      }
+
+      .item {
+        margin-bottom: 12px;
+      }
+
+      .item:last-child {
+        margin-bottom: 0;
+      }
+
+      .title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 4px;
+      }
+
+      .title-row strong {
+        font-size: 13px;
+      }
+
+      .title-row span {
+        font-size: 11px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .sub {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 5px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 17px;
+      }
+
+      li {
+        margin-bottom: 4px;
+        font-size: 12px;
+      }
+
+      .skill-block {
+        margin-bottom: 10px;
+      }
+
+      .skill-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .skill-block strong {
+        display: inline-block;
+        margin-bottom: 4px;
+        font-size: 12px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .chip {
+        border: 1px solid var(--line);
+        background: var(--chip);
+        border-radius: 999px;
+        padding: 4px 8px;
+        font-size: 11px;
+      }
+
+      .project-note {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+
+      .achievement-list li,
+      .cert-list li {
+        margin-bottom: 5px;
+      }
+
+      .edu-box {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 10px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <h1>Deepak Chauhan</h1>
+        <div class="contact">
+          <span>Greater Noida, Uttar Pradesh</span>
+          <a href="mailto:ideepakchauhan7@gmail.com">ideepakchauhan7@gmail.com</a>
+          <span>+91 93128 19766</span>
+          <a href="https://ideepakchauhan7.github.io">ideepakchauhan7.github.io</a>
+          <a href="https://github.com/ideepakchauhan7">github.com/ideepakchauhan7</a>
+          <a href="https://www.linkedin.com/in/ideepakchauhan7/">linkedin.com/in/ideepakchauhan7</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">
+          Computer Science graduate focused on low-latency C++ systems, machine learning applications,
+          and thoughtful open source contributions. Comfortable moving from algorithmic problem solving
+          into production-minded engineering work across systems, data, and web tooling.
+        </p>
+      </section>
+
+      <div class="grid">
+        <div>
+          <section>
+            <h2>Experience</h2>
+            <div class="item">
+              <div class="title-row">
+                <strong>Machine Learning Intern, Atharvo</strong>
+                <span>Aug 2024 - Sep 2024</span>
+              </div>
+              <ul>
+                <li>
+                  Improved predictive outcome performance by 30% using data cleaning, exploratory
+                  analysis, feature engineering, and Support Vector Classification.
+                </li>
+                <li>
+                  Designed a depression prediction application with 74% accuracy using personal,
+                  demographic, and social inputs, then integrated it into a Flask web interface.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Projects</h2>
+            <div class="item">
+              <div class="title-row">
+                <strong>High Frequency Trading System</strong>
+                <span>C++, Boost, ProtoBuf, Google Test</span>
+              </div>
+              <ul>
+                <li>
+                  Architected a trading system around Kite Broker's API for real-time market data and
+                  reduced end-to-end latency by 150 ms to accelerate trade execution.
+                </li>
+                <li>
+                  Engineered a low-latency order book processing 10,000+ orders per second with 99.99%
+                  accuracy through asynchronous processing and lock-free structures.
+                </li>
+              </ul>
+              <p class="project-note">Code: github.com/ideepakchauhan7/OrderBook</p>
+            </div>
+
+            <div class="item">
+              <div class="title-row">
+                <strong>Skin Disease Classification</strong>
+                <span>Python, OpenCV, Jupyter, Streamlit</span>
+              </div>
+              <ul>
+                <li>
+                  Built a CNN pipeline that automated preprocessing and labeling, reducing weekly data
+                  preparation time by 6 hours and speeding up experimentation.
+                </li>
+                <li>
+                  Improved generalization with augmentation techniques such as rotation, scaling, and
+                  flipping, contributing to a 15% accuracy increase.
+                </li>
+              </ul>
+              <p class="project-note">
+                Code: github.com/ideepakchauhan7/skin-disease-classification |
+                Live: skin-disease-classification-cnn.streamlit.app
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="title-row">
+                <strong>Black-Scholes Option Pricing Dashboard</strong>
+                <span>Python, NumPy, SciPy, Streamlit</span>
+              </div>
+              <ul>
+                <li>
+                  Developed a real-time options pricing dashboard using yfinance, numerical modeling,
+                  and interactive controls for volatility-driven analysis.
+                </li>
+                <li>
+                  Helped accelerate trader decision-making by 20% with live visualizations for call and
+                  put option behavior.
+                </li>
+              </ul>
+              <p class="project-note">
+                Code: github.com/ideepakchauhan7/blackscholes |
+                Live: blackscholesoption.streamlit.app
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Open Source Contributions</h2>
+            <div class="item">
+              <div class="title-row">
+                <strong>GitNexus</strong>
+                <span>27.5k stars</span>
+              </div>
+              <div class="sub">abhigyanpatwari/GitNexus</div>
+              <ul>
+                <li>
+                  Contributed to a zero-server TypeScript code intelligence engine that generates
+                  interactive knowledge graphs directly in the browser.
+                </li>
+                <li>
+                  Submitted an April 2026 fix in a large Graph RAG and MCP-enabled monorepo, demonstrating
+                  comfort navigating real production-grade systems.
+                </li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="title-row">
+                <strong>emdash</strong>
+                <span>9.4k stars</span>
+              </div>
+              <div class="sub">emdash-cms/emdash</div>
+              <ul>
+                <li>
+                  Contributed to a full-stack TypeScript CMS built on Astro, with work centered on type
+                  safety and plugin architecture improvements.
+                </li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="title-row">
+                <strong>Microsoft Aspire</strong>
+                <span>5.8k stars</span>
+              </div>
+              <div class="sub">microsoft/aspire</div>
+              <ul>
+                <li>
+                  Contributed to Microsoft's code-first, observable platform for .NET cloud-native
+                  application development.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <section>
+            <h2>Technical Skills</h2>
+            <div class="skill-block">
+              <strong>Programming Languages</strong>
+              <div class="chips">
+                <span class="chip">C</span>
+                <span class="chip">C++</span>
+                <span class="chip">Python</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Rust</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <strong>Frameworks and Libraries</strong>
+              <div class="chips">
+                <span class="chip">TensorFlow</span>
+                <span class="chip">Keras</span>
+                <span class="chip">Streamlit</span>
+                <span class="chip">React</span>
+                <span class="chip">Flask</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <strong>Databases and Tools</strong>
+              <div class="chips">
+                <span class="chip">MySQL</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Redis</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">Jupyter</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <strong>Core Concepts</strong>
+              <div class="chips">
+                <span class="chip">Data Structures and Algorithms</span>
+                <span class="chip">System Design</span>
+                <span class="chip">OOP</span>
+                <span class="chip">Machine Learning</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Education</h2>
+            <div class="edu-box">
+              <div class="title-row">
+                <strong>Lloyd Institute of Engineering and Technology</strong>
+                <span>Sep 2021 - May 2025</span>
+              </div>
+              <div class="sub">B.Tech. in Computer Science and Engineering | CGPA: 7.5 / 10.0</div>
+              <div class="chips">
+                <span class="chip">Operating Systems</span>
+                <span class="chip">Computer Networks</span>
+                <span class="chip">DBMS</span>
+                <span class="chip">Computer Architecture</span>
+                <span class="chip">Computational Theory</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Achievements</h2>
+            <ul class="achievement-list">
+              <li>Won first place among 150+ participants in Lloyd Institute's 24-hour Code-A-Then challenge.</li>
+              <li>Solved 480+ LeetCode problems, demonstrating sustained algorithmic practice.</li>
+              <li>Placed in the top 10% in three Codeforces competitions.</li>
+              <li>Applied a 200-hour DSA course to reduce runtime by 15% across 40+ LeetCode solutions.</li>
+              <li>Earned GitHub Pull Shark and Pair Extraordinaire achievements through open source collaboration.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+              <li>JP Morgan Software Engineering Job Simulation</li>
+              <li>Goldman Sachs Software Engineering Virtual Experience</li>
+              <li>Cisco Networking Essentials</li>
+              <li>Infosys Foundation Finishing School for Employability Program</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
