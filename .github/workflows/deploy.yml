@@ -63,14 +63,16 @@ jobs:
       
       - name: Copy built files to root
         run: |
-          # Remove old files from root (except .git and .github)
-          find . -maxdepth 1 -type f -not -name '.gitignore' -not -name '.nojekyll' -delete
-          find . -maxdepth 1 -type d -not -name '.git' -not -name '.github' -not -name 'node_modules' -not -name '.next' -not -name 'out' -exec rm -rf {} + 2>/dev/null || true
-          
+          # Clear only the previously built output (source files like app/,
+          # components/, package.json, etc. must NOT be touched here — they
+          # need to stay in the repo for the next build).
+          rm -rf _next 404 __next.__PAGE__.txt __next._full.txt __next._head.txt \
+            __next._index.txt __next._tree.txt _not-found index.html index.txt 404.html
+
           # Copy all files from out/ to root (out/. includes dotfiles like .nojekyll)
           cp -r out/. .
-          
-          # Remove unnecessary directories
+
+          # Remove build directories (already gitignored, but tidy up the runner)
           rm -rf out .next node_modules
       
       - name: Configure Git
