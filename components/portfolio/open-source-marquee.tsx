@@ -31,7 +31,7 @@ export function OpenSourceMarquee() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-primary">{contribution.stars}</p>
-                      <h3 className="mt-2 text-xl font-semibold">{contribution.name}</h3>
+                      <h3 className="mt-2 font-display text-xl font-semibold">{contribution.name}</h3>
                       <p className="mt-1 text-sm text-muted-foreground">{contribution.repo}</p>
                     </div>
                     <Sparkles className="h-5 w-5 text-primary" />

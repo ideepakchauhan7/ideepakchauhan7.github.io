@@ -1,6 +1,8 @@
 export const resumeUrl =
   "https://drive.google.com/file/d/1NaD0RkSKj21cQD1mJgktG4Y9XyiUOSmn/view?usp=sharing";
 
+export const framerBuildUrl = "https://noble-monstera-580912.framer.app";
+
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Open Source", href: "#open-source" },
@@ -13,6 +15,7 @@ export const navItems = [
 export const heroLabels = [
   "Agentic AI builder",
   "Low-latency C++ engineer",
+  "Framer & 3D web builder",
   "Open source contributor",
 ];
 
@@ -129,6 +132,10 @@ export const education = {
 };
 
 export const skills = [
+  {
+    title: "Web & 3D",
+    items: ["Framer", "Three.js / WebGL", "Responsive Web Design", "Framer Motion", "Interactive 3D"],
+  },
   {
     title: "Programming Languages",
     items: ["C", "C++", "Python", "JavaScript", "TypeScript"],

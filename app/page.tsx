@@ -17,6 +17,7 @@ import { SectionHeading } from "@/components/portfolio/section-heading";
 import { SiteHeader } from "@/components/portfolio/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import {
   achievements,
   certifications,
@@ -59,7 +60,7 @@ export default function Home() {
             <div className="grid gap-4 sm:grid-cols-2">
               <article className="rounded-[2rem] border border-border/70 bg-card/80 p-6 shadow-soft">
                 <BriefcaseBusiness className="h-6 w-6 text-primary" />
-                <h3 className="mt-4 text-xl font-semibold">Internship Impact</h3>
+                <h3 className="mt-4 font-display text-xl font-semibold">Internship Impact</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   Built agentic AI and retrieval workflows at Codtech IT Solutions and shipped a Flask-backed
                   depression prediction app at Atharvo.
@@ -67,7 +68,7 @@ export default function Home() {
               </article>
               <article className="rounded-[2rem] border border-border/70 bg-card/80 p-6 shadow-soft">
                 <BookOpen className="h-6 w-6 text-primary" />
-                <h3 className="mt-4 text-xl font-semibold">Competitive Practice</h3>
+                <h3 className="mt-4 font-display text-xl font-semibold">Competitive Practice</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   480+ LeetCode problems and Codeforces performances have sharpened algorithmic thinking,
                   debugging speed, and implementation discipline.
@@ -75,7 +76,7 @@ export default function Home() {
               </article>
               <article className="rounded-[2rem] border border-border/70 bg-card/80 p-6 shadow-soft sm:col-span-2">
                 <Award className="h-6 w-6 text-primary" />
-                <h3 className="mt-4 text-xl font-semibold">Open Source Signal</h3>
+                <h3 className="mt-4 font-display text-xl font-semibold">Open Source Signal</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   Contributions across GitNexus, emdash, and Microsoft Aspire show comfort with established
                   codebases, type-safe workflows, and production-minded engineering collaboration.
@@ -106,7 +107,7 @@ export default function Home() {
                     <div className="space-y-4">
                       <div>
                         <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">{experience.period}</p>
-                        <h3 className="mt-2 text-2xl font-semibold">
+                        <h3 className="mt-2 font-display text-2xl font-semibold">
                           {experience.role} <span className="text-muted-foreground">@ {experience.company}</span>
                         </h3>
                       </div>
@@ -130,7 +131,7 @@ export default function Home() {
                   <div className="space-y-4">
                     <div>
                       <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">{education.period}</p>
-                      <h3 className="mt-2 text-2xl font-semibold">{education.degree}</h3>
+                      <h3 className="mt-2 font-display text-2xl font-semibold">{education.degree}</h3>
                       <p className="mt-1 text-muted-foreground">{education.school}</p>
                     </div>
                     <div className="rounded-2xl border border-border/70 bg-background/70 px-4 py-3 text-sm text-muted-foreground">
@@ -160,8 +161,14 @@ export default function Home() {
 
             <div className="grid gap-4 md:grid-cols-2">
               {skills.map((group) => (
-                <article key={group.title} className="rounded-[2rem] border border-border/70 bg-card/85 p-6 shadow-soft">
-                  <h3 className="text-xl font-semibold">{group.title}</h3>
+                <article
+                  key={group.title}
+                  className={cn(
+                    "rounded-[2rem] border border-border/70 bg-card/85 p-6 shadow-soft",
+                    group.title === "Web & 3D" && "md:col-span-2",
+                  )}
+                >
+                  <h3 className="font-display text-xl font-semibold">{group.title}</h3>
                   <div className="mt-5 flex flex-wrap gap-2">
                     {group.items.map((item) => (
                       <Badge key={item} variant="outline" className="bg-background/75 px-4 py-2 text-sm">
@@ -212,7 +219,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="relative overflow-hidden py-24">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(13,148,136,0.16),transparent_28%),radial-gradient(circle_at_top_right,rgba(217,119,6,0.18),transparent_28%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(198,255,61,0.1),transparent_28%),radial-gradient(circle_at_top_right,rgba(198,255,61,0.08),transparent_28%)]" />
           <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Contact"
@@ -261,7 +268,7 @@ export default function Home() {
 
       <footer className="border-t border-border/70 py-6">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 text-sm text-muted-foreground sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>Deepak Chauhan portfolio, updated from the resume and built with Next.js, shadcn-style components, and motion.</p>
+          <p>Deepak Chauhan portfolio — built with Next.js, Tailwind, and Three.js. Also live on Framer.</p>
           <p className="font-mono text-xs uppercase tracking-[0.24em]">2026 edition</p>
         </div>
       </footer>
